@@ -14,9 +14,3 @@ resource "kind_cluster" "demo" {
         - role: worker
     EOF
 }
-
-resource "local_file" "kubeconfig" {
-  content         = kind_cluster.demo.kubeconfig
-  filename        = "${path.module}/kubeconfig"
-  file_permission = "0400"
-}
