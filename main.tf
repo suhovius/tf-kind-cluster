@@ -13,9 +13,3 @@ resource "kind_cluster" "this" {
         - role: worker
     EOF
 }
-
-resource "local_file" "kubeconfig" {
-  content         = kind_cluster.this.kubeconfig
-  filename        = "${path.module}/kind-config"
-  file_permission = "0400"
-}
