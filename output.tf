@@ -1,4 +1,4 @@
 output "kubeconfig" {
-  value       = kind_cluster.demo.kubeconfig
+  value       = "${path.module}/kind-config"
   description = "The path to the kubeconfig file"
 }
