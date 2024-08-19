@@ -11,5 +11,8 @@ resource "kind_cluster" "this" {
         nodes:
         - role: control-plane
         - role: worker
+        - role: worker
+        - role: worker
+        - role: worker
     EOF
 }
